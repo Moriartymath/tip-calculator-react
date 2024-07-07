@@ -1,5 +1,5 @@
-import { useState } from "react";
 import styles from "./PercentageInput.module.css";
+
 type PercentageInputProps = {
   children: string;
   satisfPercent: number;
@@ -19,11 +19,12 @@ function PercentageInput({
   satisfactionLevel,
 }: PercentageInputProps) {
   return (
-    <div>
+    <div className={styles.inputContainer}>
       <h3>{children}</h3>
       <select
         value={satisfPercent}
         onChange={(ev) => setSatisfPercent(+ev.target.value)}
+        className={styles.selectOptions}
       >
         <option value={satisfactionLevel.dissatisfied}>
           Dissatisfied ({satisfactionLevel.dissatisfied}%)

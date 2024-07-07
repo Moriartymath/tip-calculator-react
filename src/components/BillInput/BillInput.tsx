@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./BillInput.module.css";
 
 type BillInputProps = {
@@ -9,13 +8,14 @@ type BillInputProps = {
 
 function BillInput({ children, billAmount, setBillAmount }: BillInputProps) {
   return (
-    <div>
+    <div className={styles.billContainer}>
       <h3>{children}</h3>
       <input
         type="number"
         min={0}
         value={billAmount}
         onChange={(ev) => setBillAmount(+ev.target.value)}
+        className={styles.inputBill}
       />
     </div>
   );

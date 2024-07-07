@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5em;
+  border: 1px solid black;
+  background-color: bisque;
+  padding: 3em;
+  row-gap: 1.5em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 1.5em;
+}

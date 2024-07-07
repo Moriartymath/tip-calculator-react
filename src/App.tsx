@@ -1,8 +1,9 @@
 import BillInput from "./components/BillInput/BillInput.tsx";
 import PercentageInput from "./components/PercentageInput/PercentageInput.tsx";
-import ResetButton from "./components/ResetButton/ResetButton.tsx";
+import Button from "./components/Button/Button.tsx";
 import TotalBill from "./components/TotalBill/TotalBill.tsx";
 import { useState } from "react";
+import "./App.css";
 
 const satisfactionLevel = {
   dissatisfied: 0,
@@ -17,7 +18,7 @@ function App() {
   const [satisfPerc2, setSatisfPerc2] = useState(0);
 
   return (
-    <>
+    <form className="App">
       <BillInput billAmount={billAmount} setBillAmount={setBillAmount}>
         How much was the bill?
       </BillInput>
@@ -40,12 +41,20 @@ function App() {
         satisfPerc={satisfPerc1}
         satisfPercFriends={satisfPerc2}
       />
-      <ResetButton
-        setBillAmount={setBillAmount}
-        setSatisfPercent={setSatisfPerc1}
-        setSatisfPercentFriends={setSatisfPerc2}
-      />
-    </>
+      <div className="buttons">
+        <Button
+          onHandleClick={(ev) => {
+            ev.preventDefault();
+            setBillAmount(0);
+            setSatisfPerc1(0);
+            setSatisfPerc2(0);
+          }}
+        >
+          Reset
+        </Button>
+        <Button onHandleClick={(ev) => {}}>Send payment</Button>
+      </div>
+    </form>
   );
 }
 

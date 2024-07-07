@@ -1,0 +1,13 @@
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 3em;
+  column-gap: 3em;
+  justify-content: space-between;
+}
+.selectOptions {
+  border-radius: 2em;
+  padding: 1em;
+  background-color: chocolate;
+}

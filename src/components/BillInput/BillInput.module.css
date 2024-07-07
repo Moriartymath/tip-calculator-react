@@ -1,0 +1,14 @@
+.billContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 3em;
+}
+
+.inputBill {
+  border-radius: 2em;
+  padding: 1em;
+  background-color: chocolate;
+  border: 0;
+}
