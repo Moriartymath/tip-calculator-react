@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 
 type ButtonProps = {
   onHandleClick: (ev: SyntheticEvent) => undefined;
-  children: string;
+  children: string | React.ReactElement;
 };
 
 function Button({ onHandleClick, children }: ButtonProps) {
